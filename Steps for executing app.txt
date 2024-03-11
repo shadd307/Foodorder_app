@@ -1,0 +1,26 @@
+Before running the application make sure you provide your Database connection string as the value for the DATABASE_URI variable in the constants.js file provided within the app folder.
+
+To run the test scripts, make sure you have commented line no. 47 to 49(the following lines) of server.js file.
+
+app.listen(SERVER_PORT, () => {
+      console.log(`Server is running at port : ${SERVER_PORT}`);
+    });
+
+1. Make sure Auth is "No Auth" selected as Authorization header in Postman.
+2. Create a new user using POST request URL http://localhost:8080/api/users and body in JSON format as - 
+{
+    "username":"john35@d",
+     "fullname" : "John D",
+     "email" : "johnd@gmail.com",
+    "password" : "johnd",
+     "isAdmin" : true
+}
+
+2. Login using POST request URL http://localhost:8080/api/users/login and body in JSON format as  -{
+    "username":"john35@d",
+    "password" : "johnd"
+}
+3. Copy the session token generated for the logged in user in usersessionmodels collection and paste in the Authorization->Bearer Token. 
+
+4. Give any POST or GET request like http://localhost:8080/api/v1/categories to fetch details of categories.
+
