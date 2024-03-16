@@ -31,10 +31,10 @@ on:
     branches: [ "master" ]
 
 env:
-  AWS_REGION: MY_AWS_REGION                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: MY_ECR_REPOSITORY           # set this to your Amazon ECR repository name
-  ECS_SERVICE: MY_ECS_SERVICE                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: MY_ECS_CLUSTER                 # set this to your Amazon ECS cluster name
+  AWS_REGION: us-east-2                   # set this to your preferred AWS region, e.g. us-west-1
+  ECR_REPOSITORY: public.ecr.aws/h5k5z7x9/shadd-foodapp          # set this to your Amazon ECR repository name
+  ECS_SERVICE: Infra-ECS-Cluster-Shadd-FoodApp-897a4ed7/5f76afa0-e3ba-11ee-bb9d-06e8f6215f9f                 # set this to your Amazon ECS service name
+  ECS_CLUSTER: Shadd-FoodApp                # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: MY_ECS_TASK_DEFINITION # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: MY_CONTAINER_NAME           # set this to the name of the container in the
@@ -53,7 +53,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Configure AWS credentials
+    - name: 654654268246
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
